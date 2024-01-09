@@ -17,7 +17,7 @@ const Home = () => {
     console.log(country);
     setLocation?.(country);
     console.log(location);
-    // navigate("weather");
+    navigate("weather");
   };
 
   const fetchCountries = async () => {
