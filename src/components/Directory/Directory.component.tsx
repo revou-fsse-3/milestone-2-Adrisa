@@ -1,6 +1,6 @@
 interface Props {
-  myCollection: [];
-  handleClick: () => void;
+  myCollection: any[];
+  handleClick: any;
 }
 
 const Directory = ({ myCollection, handleClick }: Props) => {
@@ -22,7 +22,7 @@ const Directory = ({ myCollection, handleClick }: Props) => {
 
             <button
               name={`${name}`}
-              onClick={() => handleClick()}
+              onClick={() => handleClick(collection)}
               className="bg-indigo-600 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase tracking-wide"
             >
               Select

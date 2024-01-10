@@ -1,2 +1,2 @@
-export { CityContext, CityContextProvider } from "./CityContext";
-export type { Location } from "./CityContext";
+export { AppContext, AppContextProvider } from "./Context";
+export type { Location } from "./Context";

@@ -1,8 +1,6 @@
-import { CityContext } from "../../contexts";
+import { AppContext } from "../../contexts";
 import { useContext } from "react";
 const Weather = () => {
-  const { location } = useContext(CityContext);
-  console.log(location);
   return (
     <section className="weather-part">
       <img src="" alt="Weather Icon" />

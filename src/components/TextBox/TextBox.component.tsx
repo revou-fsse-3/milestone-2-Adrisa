@@ -1,5 +1,5 @@
 interface Props {
-  handleOnChange: () => void;
+  handleOnChange: any;
 }
 
 const TextBox = ({ handleOnChange }: Props) => {
