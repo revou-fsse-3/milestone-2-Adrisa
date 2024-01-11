@@ -10,7 +10,7 @@ const initialSearchState = {
 
 const City = () => {
   const country = localStorage.getItem("country");
-  const { location, setCity } = useContext(AppContext);
+  const { location, setCurrentCity } = useContext(AppContext);
   const navigate = useNavigate();
   const [search, setSearch] = useState(initialSearchState);
   const nameCountry = location?.name;
@@ -19,10 +19,10 @@ const City = () => {
   };
 
   const handleClickLocation = (state: Location) => {
-    setCity?.(state);
+    setCurrentCity?.(state);
     localStorage.removeItem("country");
     localStorage.setItem("state", state.name);
-    navigate("weather");
+    navigate("/weather");
   };
 
   useEffect(() => {

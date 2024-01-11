@@ -10,6 +10,7 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "dayjs": "^1.11.10",
     "formik": "^2.4.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AppContext, Location } from "../../contexts";
 import { ReactComponent as Magnifying } from "./../../asset/magnifying.svg";
 import HomePage from "./../../pages/Home.page";
+import json from "../../asset/city.list.json";
 
 const initialSearchState = {
   countries: [],
@@ -50,6 +51,7 @@ const Home = () => {
     const newFilteredCountries = countries.filter((country: Location) => {
       return country.name.toLocaleLowerCase().includes(searchField);
     });
+
     setFilteredCountries(newFilteredCountries);
   }, [countries, searchField]);
 
@@ -84,6 +86,7 @@ const Home = () => {
       <div className="flex  justify-center flex-wrap gap-5">
         {filteredCountries.map((country, id) => {
           const { name, iso2 } = country;
+
           return (
             <div
               key={id}

@@ -11,22 +11,22 @@ export interface Location {
   states?: string[];
 }
 
-export interface City {
-  name: string;
+export interface PropCity {
+  name: any;
 }
 
 interface Context {
   location?: Location;
   setLocation?: React.Dispatch<React.SetStateAction<Location>>;
-  city?: City;
-  setCity?: React.Dispatch<React.SetStateAction<City>>;
+  currentCity?: PropCity | undefined;
+  setCurrentCity?: React.Dispatch<React.SetStateAction<PropCity>>;
 }
 
 const defaultValue: Context = {
   location: undefined,
   setLocation: undefined,
-  city: undefined,
-  setCity: undefined,
+  currentCity: undefined,
+  setCurrentCity: undefined,
 };
 
 const initialValue = {
@@ -40,7 +40,7 @@ export const AppContext = createContext(defaultValue);
 
 export const AppContextProvider = ({ children }: Props) => {
   const [location, setLocation] = useState<Location>(initialValue);
-  const [city, setCity] = useState<City>();
-  const value = { location, setLocation, city, setCity };
+  const [currentCity, setCurrentCity] = useState<PropCity>();
+  const value = { location, setLocation, currentCity, setCurrentCity };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
