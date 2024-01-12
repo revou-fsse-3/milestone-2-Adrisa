@@ -55,11 +55,20 @@ const City = () => {
       };
     });
   };
-
+  const handleBack = () => {
+    navigate("/");
+  };
   if (country) {
     return (
       <>
         <div className="max-w-2xl mx-auto py-6">
+          <button
+            onClick={handleBack}
+            type="button"
+            className="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Back
+          </button>
           <div className="relative">
             <div className="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
               <Magnifying />
